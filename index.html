@@ -27,6 +27,11 @@
     <meta name="twitter:title" content="Mistral Restaurant - Sveti Vlas" />
     <meta name="twitter:description" content="Fresh Cuisine by the Sea." />
     <meta name="twitter:image" content="https://mistral.bg/assets/og-image.webp" />
+    <meta name="language" content="English, Bulgarian" />
+    <meta http-equiv="content-language" content="en,bg" />
+    <link rel="alternate" hreflang="en" href="https://mistral.bg/" />
+    <link rel="alternate" hreflang="bg" href="https://mistral.bg/?lang=bg" />
+    <link rel="alternate" hreflang="x-default" href="https://mistral.bg/" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -57,9 +62,15 @@
       };
     </script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js" defer></script>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <link rel="stylesheet" href="css/main.css" />
@@ -210,6 +221,8 @@
             alt="Luxury coastal restaurant terrace at sunset"
             class="h-full w-full object-cover"
             loading="eager"
+            decoding="async"
+            fetchpriority="high"
           />
         </div>
         <div class="hero-overlay absolute inset-0"></div>
@@ -230,7 +243,7 @@
           </p>
           <a
             href="#contact"
-            class="mt-10 inline-flex items-center rounded-full bg-sandy px-7 py-3 text-sm font-medium uppercase tracking-[0.12em] text-slate-900 transition hover:bg-[#e2c9ab]"
+            class="magnetic-btn mt-10 inline-flex items-center rounded-full bg-sandy px-7 py-3 text-sm font-medium uppercase tracking-[0.12em] text-slate-900 transition hover:bg-[#e2c9ab]"
             data-i18n="hero.cta"
           >
             Reserve a Table
@@ -243,6 +256,22 @@
         <p class="mt-4 max-w-3xl text-base leading-relaxed text-slate-700" data-i18n="about.body">
           Mistral brings together Black Sea ingredients, natural textures, and warm service in a coastal setting designed for memorable evenings.
         </p>
+      </section>
+
+      <section id="our-story" class="story-parallax-section relative min-h-[65vh] overflow-hidden">
+        <div
+          class="story-parallax-bg absolute inset-0"
+          data-parallax
+          style="
+            background-image: url('https://images.unsplash.com/photo-1544148103-0773bf10d330?auto=format&fit=crop&w=2200&q=85');
+          "
+        ></div>
+        <div class="story-overlay absolute inset-0"></div>
+        <div class="relative z-10 mx-auto flex min-h-[65vh] max-w-5xl items-center px-5 py-20 text-center md:px-8">
+          <p class="mx-auto max-w-3xl font-heading text-3xl leading-relaxed text-warm md:text-5xl">
+            Mistral is a legacy of Sveti Vlas, born from coastal traditions and family recipes.
+          </p>
+        </div>
       </section>
 
       <section id="menu" class="bg-[#f2eee8] py-20">
@@ -272,30 +301,35 @@
 
       <section id="reviews" class="bg-[#f7f4ef] py-20">
         <div class="mx-auto max-w-7xl px-5 md:px-8">
-          <h2 class="font-heading text-4xl text-sage">Guest Reviews</h2>
+          <h2 class="font-heading text-4xl text-sage">Voices of Mistral</h2>
           <p class="mt-2 text-sm uppercase tracking-[0.14em] text-slate-600">Stories from the Mistral table</p>
-          <div class="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            <article class="review-card glass-card p-6">
-              <div class="star-row" aria-label="5-star rating">★★★★★</div>
-              <p class="mt-3 text-sm text-slate-700">
-                Every dish felt thoughtful and elegant. The sea bass and service were absolutely outstanding.
-              </p>
-              <p class="mt-4 text-sm font-semibold text-sage">- Elena R.</p>
-            </article>
-            <article class="review-card glass-card p-6">
-              <div class="star-row" aria-label="5-star rating">★★★★★</div>
-              <p class="mt-3 text-sm text-slate-700">
-                Stunning coastal atmosphere and a beautifully curated wine list. Perfect sunset dinner spot.
-              </p>
-              <p class="mt-4 text-sm font-semibold text-sage">- Martin D.</p>
-            </article>
-            <article class="review-card glass-card p-6">
-              <div class="star-row" aria-label="5-star rating">★★★★★</div>
-              <p class="mt-3 text-sm text-slate-700">
-                Refined yet warm. The tasting menu and desserts made this one of our best evenings in Sveti Vlas.
-              </p>
-              <p class="mt-4 text-sm font-semibold text-sage">- Sofia P.</p>
-            </article>
+          <div class="swiper voices-swiper mt-8">
+            <div class="swiper-wrapper">
+              <article class="swiper-slide review-card glass-card p-6">
+                <div class="star-row" aria-label="5-star rating">★★★★★</div>
+                <p class="mt-3 text-sm text-slate-700">
+                  Every dish felt thoughtful and elegant. The sea bass and service were absolutely outstanding.
+                </p>
+                <p class="mt-4 text-sm font-semibold text-sage">- Elena R.</p>
+              </article>
+              <article class="swiper-slide review-card glass-card p-6">
+                <div class="star-row" aria-label="5-star rating">★★★★★</div>
+                <p class="mt-3 text-sm text-slate-700">
+                  Stunning coastal atmosphere and a beautifully curated wine list. Perfect sunset dinner spot.
+                </p>
+                <p class="mt-4 text-sm font-semibold text-sage">- Martin D.</p>
+              </article>
+              <article class="swiper-slide review-card glass-card p-6">
+                <div class="star-row" aria-label="5-star rating">★★★★★</div>
+                <p class="mt-3 text-sm text-slate-700">
+                  Refined yet warm. The tasting menu and desserts made this one of our best evenings in Sveti Vlas.
+                </p>
+                <p class="mt-4 text-sm font-semibold text-sage">- Sofia P.</p>
+              </article>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
           </div>
         </div>
       </section>
@@ -327,15 +361,12 @@
           </article>
         </div>
         <div class="mt-8 overflow-hidden rounded-xl border border-sage/20 map-shell">
-          <div id="mistral-map" class="h-80 w-full" role="region" aria-label="Mistral location map"></div>
-          <noscript>
-            <iframe
-              title="Mistral location map"
-              src="https://maps.google.com/maps?q=Sveti%20Vlas&t=&z=14&ie=UTF8&iwloc=&output=embed"
-              class="h-80 w-full"
-              loading="lazy"
-            ></iframe>
-          </noscript>
+          <iframe
+            title="Mistral location map"
+            src="https://maps.google.com/maps?q=Sveti%20Vlas&t=&z=14&ie=UTF8&iwloc=&output=embed"
+            class="h-80 w-full"
+            loading="lazy"
+          ></iframe>
         </div>
 
         <form id="contact-form" class="mt-8 grid gap-4 rounded-xl border border-sage/20 bg-white/45 p-6 backdrop-blur-[10px]">
@@ -359,13 +390,33 @@
               Date
               <input name="date" type="date" required class="glass-input mt-1 w-full rounded-lg border border-slate-300 px-3 py-2" />
             </label>
+            <label class="text-sm font-medium">
+              Time
+              <input name="time" type="time" required class="glass-input mt-1 w-full rounded-lg border border-slate-300 px-3 py-2" />
+            </label>
+            <label class="text-sm font-medium">
+              Guests
+              <select name="guests" required class="glass-input mt-1 w-full rounded-lg border border-slate-300 px-3 py-2">
+                <option value="">Select guests</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+              </select>
+            </label>
           </div>
           <label class="text-sm font-medium">
-            Message
-            <textarea name="message" required rows="4" class="glass-input mt-1 w-full rounded-lg border border-slate-300 px-3 py-2"></textarea>
+            Special Requests
+            <textarea name="specialRequests" rows="4" class="glass-input mt-1 w-full rounded-lg border border-slate-300 px-3 py-2"></textarea>
           </label>
           <p id="contact-form-status" class="text-sm text-slate-600"></p>
-          <button id="contact-submit" type="submit" class="reserve-btn inline-flex w-fit rounded-full px-6 py-2.5 text-sm font-semibold">
+          <button id="contact-submit" type="submit" class="magnetic-btn reserve-btn inline-flex w-fit rounded-full px-6 py-2.5 text-sm font-semibold">
             RESERVE A TABLE
           </button>
         </form>
@@ -394,12 +445,15 @@
         <section aria-labelledby="footer-social-heading">
           <h2 id="footer-social-heading" class="font-heading text-2xl font-semibold">Social</h2>
           <ul class="mt-3 space-y-2 text-sm">
-            <li><a class="footer-link" href="#" aria-label="Instagram">Instagram</a></li>
-            <li><a class="footer-link" href="#" aria-label="Facebook">Facebook</a></li>
-            <li><a class="footer-link" href="#" aria-label="Tripadvisor">Tripadvisor</a></li>
+            <li><a class="footer-link inline-flex items-center gap-2" href="https://instagram.com" target="_blank" rel="noreferrer" aria-label="Instagram"><span aria-hidden="true">◉</span>Instagram</a></li>
+            <li><a class="footer-link inline-flex items-center gap-2" href="https://facebook.com" target="_blank" rel="noreferrer" aria-label="Facebook"><span aria-hidden="true">◉</span>Facebook</a></li>
+            <li><a class="footer-link inline-flex items-center gap-2" href="https://tripadvisor.com" target="_blank" rel="noreferrer" aria-label="Tripadvisor"><span aria-hidden="true">◉</span>Tripadvisor</a></li>
           </ul>
         </section>
       </div>
+      <p class="mx-auto max-w-7xl px-5 pb-8 text-xs tracking-[0.08em] text-warm/85 md:px-8">
+        Made with passion in Sveti Vlas.
+      </p>
     </footer>
 
     <div
@@ -425,13 +479,21 @@
       </div>
     </div>
 
+    <div id="booking-success-modal" class="fixed inset-0 z-[80] hidden items-center justify-center bg-black/55 p-4" role="dialog" aria-modal="true" aria-labelledby="booking-success-title">
+      <div class="booking-modal-panel w-full max-w-md rounded-2xl border border-white/35 bg-white/80 p-7 text-center shadow-2xl backdrop-blur-md">
+        <p class="star-row mx-auto w-fit" aria-hidden="true">★★★★★</p>
+        <h3 id="booking-success-title" class="mt-2 font-heading text-4xl text-sage">Thank You</h3>
+        <p class="mt-3 text-sm text-slate-700">
+          Your reservation request was sent successfully. We will confirm your booking shortly.
+        </p>
+        <button id="booking-success-close" type="button" class="reserve-btn mt-6 inline-flex rounded-full px-6 py-2.5 text-sm font-semibold">
+          Close
+        </button>
+      </div>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
-    <script src="js/map.js"></script>
-    <script
-      src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&callback=initMistralMap"
-      async
-      defer
-    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script type="module" src="js/i18n.js"></script>
     <script type="module" src="js/menu.js"></script>
     <script type="module" src="js/gallery.js"></script>
