@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mistral Restaurant - Sveti Vlas | Fresh Cuisine by the Sea</title>
+    <meta
+      name="description"
+      content="Mistral Restaurant in Sveti Vlas - fresh coastal cuisine, beachside atmosphere, and premium hospitality."
+    />
+    <meta name="author" content="Mistral Restaurant" />
+    <meta name="theme-color" content="#7C9A7E" />
+    <meta name="keywords" content="restaurant Sveti Vlas, Bulgarian seafood, beachside dining, Mistral restaurant" />
+    <meta name="robots" content="index,follow" />
+    <link rel="canonical" href="https://mistral.bg/" />
+
+    <meta property="og:site_name" content="Mistral Restaurant" />
+    <meta property="og:locale" content="en_BG" />
+    <meta property="og:title" content="Mistral Restaurant - Sveti Vlas | Fresh Cuisine by the Sea" />
+    <meta property="og:description" content="Premium coastal dining in Sveti Vlas with fresh cuisine, events, and seaside atmosphere." />
+    <meta property="og:image" content="https://mistral.bg/assets/og-image.webp" />
+    <meta property="og:url" content="https://mistral.bg/" />
+    <meta property="og:type" content="website" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@mistralrestaurant" />
+    <meta name="twitter:title" content="Mistral Restaurant - Sveti Vlas" />
+    <meta name="twitter:description" content="Fresh Cuisine by the Sea." />
+    <meta name="twitter:image" content="https://mistral.bg/assets/og-image.webp" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600&family=Cormorant+Garamond:wght@400;600;700&family=DM+Sans:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              sage: "#7C9A7E",
+              sandy: "#D4B896",
+              warm: "#FAF8F5",
+              sageDeep: "#3f5642",
+              linen: "#F2EEE8",
+              driftwood: "#8F7B66",
+            },
+            fontFamily: {
+              heading: ["Cormorant Garamond", "serif"],
+              body: ["DM Sans", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <link rel="stylesheet" href="css/main.css" />
+    <style>
+      /* Critical fallback styles for GitHub Pages */
+      html,
+      body {
+        overflow-x: hidden;
+        overflow-y: auto;
+      }
+
+      body {
+        color: #0f172a;
+      }
+
+      .preloader {
+        position: fixed;
+        inset: 0;
+        z-index: 120;
+        display: grid;
+        place-items: center;
+        background: #7c9a7e;
+        transition: opacity 320ms ease, visibility 320ms ease;
+        pointer-events: none;
+      }
+
+      .preloader.is-hidden {
+        opacity: 0;
+        visibility: hidden;
+        display: none !important;
+      }
+
+      .preloader-mark {
+        color: #faf8f5;
+        font-family: "Cormorant Garamond", serif;
+        font-size: 3rem;
+        letter-spacing: 0.08em;
+      }
+
+      .hero-overlay {
+        background: linear-gradient(
+          to bottom,
+          rgba(22, 30, 24, 0.28) 0%,
+          rgba(22, 30, 24, 0.5) 52%,
+          rgba(22, 30, 24, 0.72) 100%
+        );
+      }
+
+      .ken-burns img {
+        transform-origin: center center;
+        animation: kenBurnsZoom 30s ease-in-out infinite alternate;
+        will-change: transform;
+      }
+
+      @keyframes kenBurnsZoom {
+        0% {
+          transform: scale(1) translate(0, 0);
+        }
+        100% {
+          transform: scale(1.12) translate(-1.6%, -1%);
+        }
+      }
+
+      .glass-card {
+        background: rgba(255, 255, 255, 0.54);
+        border: 1px solid rgba(124, 154, 126, 0.3);
+        border-radius: 14px;
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+      }
+
+      .glass-input {
+        background: rgba(255, 255, 255, 0.56);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+      }
+    </style>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Restaurant",
+        "name": "Mistral Restaurant",
+        "url": "https://mistral.bg/",
+        "image": "https://mistral.bg/assets/og-image.webp",
+        "servesCuisine": ["Seafood", "Mediterranean", "Bulgarian"],
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Marina Promenade",
+          "addressLocality": "Sveti Vlas",
+          "addressCountry": "BG"
+        },
+        "hasMenu": "https://mistral.bg/#menu"
+      }
+    </script>
+  </head>
+  <body class="bg-warm text-slate-900 font-body antialiased">
+    <script>
+      window.setTimeout(function () {
+        var preloader = document.getElementById("preloader");
+        if (preloader) {
+          preloader.classList.add("is-hidden");
+          preloader.style.display = "none";
+        }
+        document.body.style.overflow = "auto";
+      }, 2000);
+    </script>
+
+    <div id="preloader" class="preloader" aria-hidden="true">
+      <div class="preloader-mark">Mistral</div>
+    </div>
+
+    <header id="site-header" class="fixed inset-x-0 top-0 z-50 transition-all duration-300">
+      <nav id="main-nav" class="mx-auto max-w-7xl px-5 md:px-8">
+        <div class="nav-shell grid min-h-[4.5rem] grid-cols-[1fr_auto_1fr] items-center gap-4">
+          <a href="#hero" class="justify-self-start text-2xl font-heading font-semibold tracking-wide text-warm">
+            Mistral
+          </a>
+
+          <ul class="hidden items-center justify-center gap-6 md:flex">
+            <li><a class="nav-link active" href="#hero" data-i18n="nav.home">Home</a></li>
+            <li><a class="nav-link" href="#about" data-i18n="nav.about">About</a></li>
+            <li><a class="nav-link" href="#menu" data-i18n="nav.menu">Menu</a></li>
+            <li><a class="nav-link" href="#gallery" data-i18n="nav.gallery">Gallery</a></li>
+            <li><a class="nav-link" href="#events" data-i18n="nav.events">Events</a></li>
+            <li><a class="nav-link" href="#contact" data-i18n="nav.contact">Contact</a></li>
+          </ul>
+
+          <div class="lang-group justify-self-end" role="group" aria-label="Language switcher">
+            <button class="lang-switch is-active" type="button" data-lang="en">EN</button>
+            <button class="lang-switch" type="button" data-lang="ua">UA</button>
+            <button class="lang-switch" type="button" data-lang="bg">BG</button>
+            <button class="lang-switch" type="button" data-lang="ru">RU</button>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section
+        id="hero"
+        class="relative flex min-h-screen items-center overflow-hidden"
+        aria-label="Hero section"
+      >
+        <div class="hero-bg ken-burns absolute inset-0">
+          <img
+            src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=2200&q=85"
+            alt="Luxury coastal restaurant terrace at sunset"
+            class="h-full w-full object-cover"
+            loading="eager"
+          />
+        </div>
+        <div class="hero-overlay absolute inset-0"></div>
+
+        <div class="hero-content relative z-10 mx-auto w-full max-w-7xl px-5 pt-24 md:px-8">
+          <p class="mb-4 text-sm uppercase tracking-[0.35em] text-sandy">Sveti Vlas, Bulgaria</p>
+          <h1
+            class="max-w-3xl font-heading text-5xl font-semibold leading-tight text-warm md:text-7xl"
+            data-i18n="hero.title"
+          >
+            Fresh Coastal Cuisine with a Homey Premium Atmosphere
+          </h1>
+          <p
+            class="mt-6 max-w-2xl text-base leading-relaxed text-white/90 md:text-lg"
+            data-i18n="hero.subtitle"
+          >
+            A refined seaside dining experience inspired by natural textures, warm hospitality, and timeless Black Sea flavors.
+          </p>
+          <a
+            href="#contact"
+            class="mt-10 inline-flex items-center rounded-full bg-sandy px-7 py-3 text-sm font-medium uppercase tracking-[0.12em] text-slate-900 transition hover:bg-[#e2c9ab]"
+            data-i18n="hero.cta"
+          >
+            Reserve a Table
+          </a>
+        </div>
+      </section>
+
+      <section id="about" class="mx-auto max-w-7xl px-5 py-20 md:px-8">
+        <h2 class="font-heading text-4xl text-sage" data-i18n="about.title">About Mistral</h2>
+        <p class="mt-4 max-w-3xl text-base leading-relaxed text-slate-700" data-i18n="about.body">
+          Mistral brings together Black Sea ingredients, natural textures, and warm service in a coastal setting designed for memorable evenings.
+        </p>
+      </section>
+
+      <section id="menu" class="bg-[#f2eee8] py-20">
+        <div class="mx-auto max-w-7xl px-5 md:px-8">
+          <div class="mb-10 flex flex-wrap items-end justify-between gap-6">
+            <div>
+              <h2 class="font-heading text-4xl text-sage" data-i18n="menu.title">Our Menu</h2>
+              <p class="mt-2 text-sm uppercase tracking-[0.14em] text-slate-600" data-i18n="menu.subtitle">
+                Freshly made, daily inspired
+              </p>
+            </div>
+            <div id="menu-tabs" class="flex flex-wrap gap-2" role="tablist" aria-label="Menu categories"></div>
+          </div>
+
+          <div id="menu-grid" class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"></div>
+          <p id="menu-empty" class="mt-8 hidden text-center text-slate-600" data-i18n="menu.empty"></p>
+        </div>
+      </section>
+
+      <section id="gallery" class="mx-auto max-w-7xl px-5 py-20 md:px-8">
+        <h2 class="font-heading text-4xl text-sage" data-i18n="gallery.title">Gallery</h2>
+        <p class="mt-2 text-sm uppercase tracking-[0.14em] text-slate-600" data-i18n="gallery.subtitle">
+          Seaside moments
+        </p>
+        <div id="gallery-grid" class="masonry-grid mt-8"></div>
+      </section>
+
+      <section id="reviews" class="bg-[#f7f4ef] py-20">
+        <div class="mx-auto max-w-7xl px-5 md:px-8">
+          <h2 class="font-heading text-4xl text-sage">Guest Reviews</h2>
+          <p class="mt-2 text-sm uppercase tracking-[0.14em] text-slate-600">Stories from the Mistral table</p>
+          <div class="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            <article class="review-card glass-card p-6">
+              <div class="star-row" aria-label="5-star rating">★★★★★</div>
+              <p class="mt-3 text-sm text-slate-700">
+                Every dish felt thoughtful and elegant. The sea bass and service were absolutely outstanding.
+              </p>
+              <p class="mt-4 text-sm font-semibold text-sage">- Elena R.</p>
+            </article>
+            <article class="review-card glass-card p-6">
+              <div class="star-row" aria-label="5-star rating">★★★★★</div>
+              <p class="mt-3 text-sm text-slate-700">
+                Stunning coastal atmosphere and a beautifully curated wine list. Perfect sunset dinner spot.
+              </p>
+              <p class="mt-4 text-sm font-semibold text-sage">- Martin D.</p>
+            </article>
+            <article class="review-card glass-card p-6">
+              <div class="star-row" aria-label="5-star rating">★★★★★</div>
+              <p class="mt-3 text-sm text-slate-700">
+                Refined yet warm. The tasting menu and desserts made this one of our best evenings in Sveti Vlas.
+              </p>
+              <p class="mt-4 text-sm font-semibold text-sage">- Sofia P.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="events" class="bg-[#f2eee8] py-20">
+        <div class="mx-auto max-w-7xl px-5 md:px-8">
+          <h2 class="font-heading text-4xl text-sage" data-i18n="events.title">Upcoming Events</h2>
+          <p class="mt-2 text-sm uppercase tracking-[0.14em] text-slate-600" data-i18n="events.subtitle">
+            Curated evenings and live experiences
+          </p>
+          <div id="events-grid" class="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-3"></div>
+        </div>
+      </section>
+
+      <section id="contact" class="mx-auto max-w-7xl px-5 py-20 md:px-8">
+        <h2 class="font-heading text-4xl text-sage" data-i18n="contact.title">Contact</h2>
+        <div class="mt-8 grid gap-5 md:grid-cols-3">
+          <article class="glass-card p-6">
+            <h3 class="font-heading text-2xl text-sage" data-i18n="contact.addressTitle">Address</h3>
+            <p class="mt-2 text-sm text-slate-700" data-i18n="contact.addressBody">Marina Promenade, Sveti Vlas</p>
+          </article>
+          <article class="glass-card p-6">
+            <h3 class="font-heading text-2xl text-sage" data-i18n="contact.hoursTitle">Phone & Hours</h3>
+            <p class="mt-2 text-sm text-slate-700" data-i18n="contact.hoursBody">+359 000 000 000 · Daily 09:00–23:00</p>
+          </article>
+          <article class="glass-card p-6">
+            <h3 class="font-heading text-2xl text-sage" data-i18n="contact.socialTitle">Social</h3>
+            <p class="mt-2 text-sm text-slate-700" data-i18n="contact.socialBody">Instagram · Facebook · Tripadvisor</p>
+          </article>
+        </div>
+        <div class="mt-8 overflow-hidden rounded-xl border border-sage/20 map-shell">
+          <div id="mistral-map" class="h-80 w-full" role="region" aria-label="Mistral location map"></div>
+          <noscript>
+            <iframe
+              title="Mistral location map"
+              src="https://maps.google.com/maps?q=Sveti%20Vlas&t=&z=14&ie=UTF8&iwloc=&output=embed"
+              class="h-80 w-full"
+              loading="lazy"
+            ></iframe>
+          </noscript>
+        </div>
+
+        <form id="contact-form" class="mt-8 grid gap-4 rounded-xl border border-sage/20 bg-white/45 p-6 backdrop-blur-[10px]">
+          <input type="text" name="company" class="hidden" tabindex="-1" autocomplete="off" />
+          <div class="grid gap-4 md:grid-cols-2">
+            <label class="text-sm font-medium">
+              Name
+              <input name="name" required class="glass-input mt-1 w-full rounded-lg border border-slate-300 px-3 py-2" />
+            </label>
+            <label class="text-sm font-medium">
+              Email
+              <input name="email" type="email" required class="glass-input mt-1 w-full rounded-lg border border-slate-300 px-3 py-2" />
+            </label>
+          </div>
+          <div class="grid gap-4 md:grid-cols-2">
+            <label class="text-sm font-medium">
+              Phone (optional)
+              <input name="phone" class="glass-input mt-1 w-full rounded-lg border border-slate-300 px-3 py-2" />
+            </label>
+            <label class="text-sm font-medium">
+              Date
+              <input name="date" type="date" required class="glass-input mt-1 w-full rounded-lg border border-slate-300 px-3 py-2" />
+            </label>
+          </div>
+          <label class="text-sm font-medium">
+            Message
+            <textarea name="message" required rows="4" class="glass-input mt-1 w-full rounded-lg border border-slate-300 px-3 py-2"></textarea>
+          </label>
+          <p id="contact-form-status" class="text-sm text-slate-600"></p>
+          <button id="contact-submit" type="submit" class="reserve-btn inline-flex w-fit rounded-full px-6 py-2.5 text-sm font-semibold">
+            RESERVE A TABLE
+          </button>
+        </form>
+      </section>
+    </main>
+
+    <footer id="footer" class="bg-sage text-warm">
+      <div class="footer-grid mx-auto grid max-w-7xl gap-10 px-5 py-14 md:grid-cols-3 md:px-8">
+        <section aria-labelledby="footer-brand-heading">
+          <h2 id="footer-brand-heading" class="font-heading text-3xl font-semibold">Mistral</h2>
+          <p class="mt-3 max-w-sm text-sm text-warm/90">
+            Premium coastal restaurant in Sveti Vlas. Seasonal ingredients, crafted experiences, and warm hospitality.
+          </p>
+        </section>
+
+        <section aria-labelledby="footer-nav-heading">
+          <h2 id="footer-nav-heading" class="font-heading text-2xl font-semibold">Navigation</h2>
+          <ul class="mt-3 space-y-2 text-sm">
+            <li><a class="footer-link" href="#hero" data-i18n="nav.home">Home</a></li>
+            <li><a class="footer-link" href="#about" data-i18n="nav.about">About</a></li>
+            <li><a class="footer-link" href="#menu" data-i18n="nav.menu">Menu</a></li>
+            <li><a class="footer-link" href="#contact" data-i18n="nav.contact">Contact</a></li>
+          </ul>
+        </section>
+
+        <section aria-labelledby="footer-social-heading">
+          <h2 id="footer-social-heading" class="font-heading text-2xl font-semibold">Social</h2>
+          <ul class="mt-3 space-y-2 text-sm">
+            <li><a class="footer-link" href="#" aria-label="Instagram">Instagram</a></li>
+            <li><a class="footer-link" href="#" aria-label="Facebook">Facebook</a></li>
+            <li><a class="footer-link" href="#" aria-label="Tripadvisor">Tripadvisor</a></li>
+          </ul>
+        </section>
+      </div>
+    </footer>
+
+    <div
+      id="menu-modal"
+      class="fixed inset-0 z-[70] hidden items-center justify-center bg-black/60 p-4"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="menu-modal-title"
+    >
+      <div class="menu-modal-panel relative max-h-[90vh] w-full max-w-3xl overflow-y-auto rounded-2xl bg-white p-6 shadow-2xl md:p-8">
+        <button
+          id="menu-modal-close"
+          class="absolute right-4 top-4 rounded-full border border-slate-200 p-2 transition hover:bg-slate-100"
+          aria-label="Close menu item details"
+        >
+          ✕
+        </button>
+        <img id="menu-modal-image" src="https://images.unsplash.com/photo-1559847844-5315695dadae?auto=format&fit=crop&w=1400&q=85" alt="" class="h-56 w-full rounded-xl object-cover md:h-80" />
+        <h3 id="menu-modal-title" class="mt-5 font-heading text-4xl text-sage"></h3>
+        <p id="menu-modal-description" class="mt-3 text-slate-700"></p>
+        <div id="menu-modal-allergens" class="mt-4 flex flex-wrap gap-2"></div>
+        <p id="menu-modal-price" class="mt-5 text-xl font-semibold text-sage"></p>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+    <script src="js/map.js"></script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&callback=initMistralMap"
+      async
+      defer
+    ></script>
+    <script type="module" src="js/i18n.js"></script>
+    <script type="module" src="js/menu.js"></script>
+    <script type="module" src="js/gallery.js"></script>
+    <script type="module" src="js/events.js"></script>
+    <script type="module" src="js/contact.js"></script>
+    <script src="js/qa-check.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
