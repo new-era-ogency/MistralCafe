@@ -302,6 +302,15 @@ h2 {
   box-shadow: 0 10px 22px rgba(39, 52, 41, 0.15);
 }
 
+.event-card {
+  transition: transform 260ms ease, box-shadow 260ms ease;
+}
+
+.event-card:hover {
+  transform: var(--tilt) translateY(-6px) scale(1.015) !important;
+  box-shadow: 0 16px 30px rgba(33, 47, 35, 0.2);
+}
+
 .event-caption {
   font-family: "Caveat", "Segoe Script", cursive;
   font-size: 1.25rem;

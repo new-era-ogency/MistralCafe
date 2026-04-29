@@ -30,7 +30,7 @@ const validateDate = (dateValue) => {
 };
 
 const isValidPhone = (phoneValue) => {
-  if (!phoneValue) return true;
+  if (!phoneValue) return false;
   return /^\+?[0-9()\-\s]{7,20}$/.test(phoneValue);
 };
 
@@ -66,7 +66,7 @@ form?.addEventListener("submit", async (event) => {
     specialRequests: String(formData.get("specialRequests") || "").trim(),
   };
 
-  if (!payload.name || !payload.email || !payload.date || !payload.time || !payload.guests) {
+  if (!payload.name || !payload.email || !payload.phone || !payload.date || !payload.time || !payload.guests) {
     setStatus("Please fill in all required fields.", true);
     return;
   }

@@ -32,7 +32,8 @@ const renderEvents = () => {
   futureEvents.forEach((event, index) => {
     const tilt = index % 2 === 0 ? "rotate(-3deg)" : "rotate(3deg)";
     const card = document.createElement("article");
-    card.className = "polaroid-card";
+    card.className = "polaroid-card event-card";
+    card.style.setProperty("--tilt", tilt);
     card.style.transform = tilt;
 
     card.innerHTML = `
