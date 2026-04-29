@@ -1,0 +1,155 @@
+{
+  "categories": [
+    {
+      "key": "all",
+      "label": {
+        "en": "All",
+        "ua": "Усе",
+        "bg": "Всички",
+        "ru": "Все"
+      }
+    },
+    {
+      "key": "starters",
+      "label": {
+        "en": "Starters",
+        "ua": "Закуски",
+        "bg": "Предястия",
+        "ru": "Закуски"
+      }
+    },
+    {
+      "key": "mains",
+      "label": {
+        "en": "Mains",
+        "ua": "Основні",
+        "bg": "Основни",
+        "ru": "Основные"
+      }
+    },
+    {
+      "key": "sea",
+      "label": {
+        "en": "Sea",
+        "ua": "Море",
+        "bg": "Море",
+        "ru": "Море"
+      }
+    },
+    {
+      "key": "desserts",
+      "label": {
+        "en": "Desserts",
+        "ua": "Десерти",
+        "bg": "Десерти",
+        "ru": "Десерты"
+      }
+    },
+    {
+      "key": "drinks",
+      "label": {
+        "en": "Drinks",
+        "ua": "Напої",
+        "bg": "Напитки",
+        "ru": "Напитки"
+      }
+    }
+  ],
+  "items": [
+    {
+      "id": "starter-bruschetta",
+      "category": "starters",
+      "imagePath": "https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=1200&q=80",
+      "name": {
+        "en": "Tomato Bruschetta",
+        "ua": "Брускета з томатами",
+        "bg": "Брускета с домати",
+        "ru": "Брускетта с томатами"
+      },
+      "description": {
+        "en": "Toasted sourdough, heirloom tomatoes, basil and extra virgin olive oil.",
+        "ua": "Підсмажений хліб, томати, базилік і оливкова олія.",
+        "bg": "Запечен хляб, домати, босилек и зехтин.",
+        "ru": "Поджаренный хлеб, томаты, базилик и оливковое масло."
+      },
+      "price": "11.00",
+      "allergens": ["Gluten"]
+    },
+    {
+      "id": "main-lamb",
+      "category": "mains",
+      "imagePath": "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1200&q=80",
+      "name": {
+        "en": "Herb-Crusted Lamb",
+        "ua": "Ягня в травах",
+        "bg": "Агнешко с билкова коричка",
+        "ru": "Ягненок в травах"
+      },
+      "description": {
+        "en": "Slow-roasted lamb with rosemary potatoes and seasonal vegetables.",
+        "ua": "Повільно запечене ягня з картоплею та сезонними овочами.",
+        "bg": "Бавно печено агнешко с картофи и сезонни зеленчуци.",
+        "ru": "Медленно запеченный ягненок с картофелем и овощами."
+      },
+      "price": "32.00",
+      "allergens": []
+    },
+    {
+      "id": "sea-platter",
+      "category": "sea",
+      "imagePath": "https://images.unsplash.com/photo-1559847844-5315695dadae?auto=format&fit=crop&w=1200&q=80",
+      "name": {
+        "en": "Coastal Seafood Platter",
+        "ua": "Морське асорті",
+        "bg": "Морско плато",
+        "ru": "Морское ассорти"
+      },
+      "description": {
+        "en": "Sea bass, mussels, shrimp and grilled octopus with citrus butter.",
+        "ua": "Сібас, мідії, креветки та восьминіг із цитрусовим маслом.",
+        "bg": "Лаврак, миди, скариди и октопод с цитрусово масло.",
+        "ru": "Сибас, мидии, креветки и осьминог с цитрусовым маслом."
+      },
+      "price": "41.00",
+      "allergens": ["Fish", "Shellfish"]
+    },
+    {
+      "id": "dessert-panna-cotta",
+      "category": "desserts",
+      "imagePath": "https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=1200&q=80",
+      "name": {
+        "en": "Vanilla Panna Cotta",
+        "ua": "Ванільна панна-котта",
+        "bg": "Ванилова панакота",
+        "ru": "Ванильная панна-котта"
+      },
+      "description": {
+        "en": "Silky vanilla cream with berry coulis and caramelized almonds.",
+        "ua": "Ніжний ванільний крем з ягідним соусом і мигдалем.",
+        "bg": "Нежен ванилов крем с горски плодове и бадеми.",
+        "ru": "Нежный ванильный крем с ягодным соусом и миндалем."
+      },
+      "price": "12.00",
+      "allergens": ["Dairy", "Nuts"]
+    },
+    {
+      "id": "drink-signature",
+      "category": "drinks",
+      "imagePath": "https://images.unsplash.com/photo-1470337458703-46ad1756a187?auto=format&fit=crop&w=1200&q=80",
+      "name": {
+        "en": "Sandy Breeze Spritz",
+        "ua": "Сенді Бріз Сприц",
+        "bg": "Санди Бриз Сприц",
+        "ru": "Сэнди Бриз Спритц"
+      },
+      "description": {
+        "en": "Sparkling wine, citrus, peach and rosemary with sea-salt rim.",
+        "ua": "Ігристе, цитрус, персик і розмарин з морською сіллю.",
+        "bg": "Пенливо вино, цитрус, праскова и розмарин.",
+        "ru": "Игристое вино, цитрус, персик и розмарин."
+      },
+      "price": "10.50",
+      "allergens": ["Sulphites"]
+    }
+  ]
+}

@@ -1,4 +1,3 @@
-import { menuItems, menuCategories } from "../data/menu.js";
 import { getLocale, onLocaleChange, t } from "./i18n.js";
 
 const menuTabs = document.getElementById("menu-tabs");
@@ -14,6 +13,8 @@ const modalPrice = document.getElementById("menu-modal-price");
 
 let activeCategory = "all";
 let lastFocusedElement = null;
+let menuItems = [];
+let menuCategories = [];
 
 const getText = (localMap) => localMap[getLocale()] || localMap.en;
 
@@ -41,9 +42,9 @@ const renderTabs = () => {
 const openModal = (item) => {
   lastFocusedElement = document.activeElement;
 
-  modalImage.src = item.image;
-  modalImage.alt = getText(item.title);
-  modalTitle.textContent = getText(item.title);
+  modalImage.src = item.imagePath;
+  modalImage.alt = getText(item.name);
+  modalTitle.textContent = getText(item.name);
   modalDescription.textContent = getText(item.description);
   modalAllergens.innerHTML = "";
   item.allergens.forEach((allergen) => {
@@ -91,11 +92,11 @@ const renderMenuGrid = () => {
 
   filtered.forEach((item) => {
     const card = document.createElement("article");
-    card.className = "menu-card";
+    card.className = "menu-card glass-card-hover";
     card.innerHTML = `
-      <button type="button" class="menu-card-button w-full text-left" aria-label="${getText(item.title)}">
+      <button type="button" class="menu-card-button w-full text-left" aria-label="${getText(item.name)}">
         <div class="menu-card-image-wrap">
-          <img src="${item.image}" alt="${getText(item.title)}" class="h-48 w-full object-cover" loading="lazy" />
+          <img src="${item.imagePath}" alt="${getText(item.name)}" class="h-48 w-full object-cover" loading="lazy" />
           <span class="menu-plus" aria-hidden="true">
             <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M12 5v14M5 12h14"></path>
@@ -104,10 +105,10 @@ const renderMenuGrid = () => {
         </div>
         <div class="p-4">
           <div class="flex items-center justify-between gap-2">
-            <h3 class="font-heading text-2xl text-sage">${getText(item.title)}</h3>
+            <h3 class="font-heading text-2xl text-sage">${getText(item.name)}</h3>
             <span class="rounded-full bg-sage/10 px-3 py-1 text-sm font-semibold text-sage">€${item.price}</span>
           </div>
-          <p class="mt-2 line-clamp-2 text-sm text-slate-700">${getText(item.description)}</p>
+          <p class="mt-2 text-sm text-slate-700">${getText(item.description)}</p>
         </div>
       </button>
     `;
@@ -149,8 +150,24 @@ document.addEventListener("keydown", (event) => {
   trapFocus(event);
 });
 
-renderTabs();
-renderMenuGrid();
+const normalizeMenuData = (data) => {
+  menuCategories = Array.isArray(data.categories) ? data.categories : [];
+  menuItems = Array.isArray(data.items) ? data.items : [];
+};
+
+const loadMenuData = async () => {
+  try {
+    const response = await fetch("data/menu.json");
+    const data = await response.json();
+    normalizeMenuData(data);
+  } catch {
+    normalizeMenuData({ categories: [], items: [] });
+  }
+  renderTabs();
+  renderMenuGrid();
+};
+
+loadMenuData();
 onLocaleChange(() => {
   renderTabs();
   renderMenuGrid();

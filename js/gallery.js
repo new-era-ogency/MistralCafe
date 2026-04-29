@@ -1,16 +1,43 @@
 const galleryGrid = document.getElementById("gallery-grid");
 
-const galleryItems = Array.from({ length: 12 }).map((_, index) => {
-  const id = index + 1;
-  const width = id % 2 === 0 ? 900 : 700;
-  const height = id % 3 === 0 ? 1100 : 850;
-  const src = `https://picsum.photos/seed/mistral-gallery-${id}/${width}/${height}.webp`;
-  return {
-    src,
-    srcset: `${src} 1x, https://picsum.photos/seed/mistral-gallery-${id}/${width * 2}/${height * 2}.webp 2x`,
-    alt: `Mistral gallery image ${id}`,
-  };
-});
+const galleryItems = [
+  {
+    src: "https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=1200&q=85",
+    srcset:
+      "https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=1200&q=85 1x, https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=2400&q=85 2x",
+    alt: "Luxury coastal restaurant terrace",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1559847844-5315695dadae?auto=format&fit=crop&w=900&q=85",
+    srcset:
+      "https://images.unsplash.com/photo-1559847844-5315695dadae?auto=format&fit=crop&w=900&q=85 1x, https://images.unsplash.com/photo-1559847844-5315695dadae?auto=format&fit=crop&w=1800&q=85 2x",
+    alt: "Seafood platter close-up",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1000&q=85",
+    srcset:
+      "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1000&q=85 1x, https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=2000&q=85 2x",
+    alt: "Elegant dinner table setup",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=900&q=85",
+    srcset:
+      "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=900&q=85 1x, https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1800&q=85 2x",
+    alt: "Premium restaurant interior",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1551218808-94e220e084d2?auto=format&fit=crop&w=1100&q=85",
+    srcset:
+      "https://images.unsplash.com/photo-1551218808-94e220e084d2?auto=format&fit=crop&w=1100&q=85 1x, https://images.unsplash.com/photo-1551218808-94e220e084d2?auto=format&fit=crop&w=2200&q=85 2x",
+    alt: "Fine dining food presentation",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=900&q=85",
+    srcset:
+      "https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=900&q=85 1x, https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=1800&q=85 2x",
+    alt: "Dessert close-up at restaurant",
+  },
+];
 
 const renderGallery = () => {
   if (!galleryGrid) return;

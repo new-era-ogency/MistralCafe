@@ -1,0 +1,70 @@
+backend:
+  name: github
+  repo: YOUR_GITHUB_USERNAME/mistral
+  branch: master
+
+media_folder: "assets/images"
+public_folder: "assets/images"
+
+publish_mode: editorial_workflow
+
+collections:
+  - name: "menu_content"
+    label: "Menu Content"
+    files:
+      - name: "menu_file"
+        label: "Menu JSON"
+        file: "data/menu.json"
+        format: "json"
+        fields:
+          - label: "Categories"
+            name: "categories"
+            widget: "list"
+            summary: "{{fields.key}}"
+            fields:
+              - { label: "Key", name: "key", widget: "string" }
+              - label: "Label"
+                name: "label"
+                widget: "object"
+                fields:
+                  - { label: "English", name: "en", widget: "string" }
+                  - { label: "Ukrainian", name: "ua", widget: "string" }
+                  - { label: "Bulgarian", name: "bg", widget: "string" }
+                  - { label: "Russian", name: "ru", widget: "string" }
+
+          - label: "Items"
+            name: "items"
+            widget: "list"
+            summary: "{{fields.id}} - {{fields.category}}"
+            fields:
+              - { label: "ID", name: "id", widget: "string" }
+              - label: "Category"
+                name: "category"
+                widget: "select"
+                options: ["starters", "mains", "sea", "desserts", "drinks"]
+              - label: "Image"
+                name: "imagePath"
+                widget: "image"
+                required: true
+              - label: "Name"
+                name: "name"
+                widget: "object"
+                fields:
+                  - { label: "English", name: "en", widget: "string" }
+                  - { label: "Ukrainian", name: "ua", widget: "string" }
+                  - { label: "Bulgarian", name: "bg", widget: "string" }
+                  - { label: "Russian", name: "ru", widget: "string" }
+              - label: "Description"
+                name: "description"
+                widget: "object"
+                fields:
+                  - { label: "English", name: "en", widget: "text" }
+                  - { label: "Ukrainian", name: "ua", widget: "text" }
+                  - { label: "Bulgarian", name: "bg", widget: "text" }
+                  - { label: "Russian", name: "ru", widget: "text" }
+              - { label: "Price", name: "price", widget: "string" }
+              - label: "Allergens"
+                name: "allergens"
+                widget: "list"
+                allow_add: true
+                collapsed: false

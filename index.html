@@ -8,10 +8,14 @@
       name="description"
       content="Mistral Restaurant in Sveti Vlas - fresh coastal cuisine, beachside atmosphere, and premium hospitality."
     />
+    <meta name="author" content="Mistral Restaurant" />
+    <meta name="theme-color" content="#7C9A7E" />
     <meta name="keywords" content="restaurant Sveti Vlas, Bulgarian seafood, beachside dining, Mistral restaurant" />
     <meta name="robots" content="index,follow" />
     <link rel="canonical" href="https://mistral.bg/" />
 
+    <meta property="og:site_name" content="Mistral Restaurant" />
+    <meta property="og:locale" content="en_BG" />
     <meta property="og:title" content="Mistral Restaurant - Sveti Vlas | Fresh Cuisine by the Sea" />
     <meta property="og:description" content="Premium coastal dining in Sveti Vlas with fresh cuisine, events, and seaside atmosphere." />
     <meta property="og:image" content="https://mistral.bg/assets/og-image.webp" />
@@ -19,6 +23,7 @@
     <meta property="og:type" content="website" />
 
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@mistralrestaurant" />
     <meta name="twitter:title" content="Mistral Restaurant - Sveti Vlas" />
     <meta name="twitter:description" content="Fresh Cuisine by the Sea." />
     <meta name="twitter:image" content="https://mistral.bg/assets/og-image.webp" />
@@ -39,6 +44,9 @@
               sage: "#7C9A7E",
               sandy: "#D4B896",
               warm: "#FAF8F5",
+              sageDeep: "#3f5642",
+              linen: "#F2EEE8",
+              driftwood: "#8F7B66",
             },
             fontFamily: {
               heading: ["Cormorant Garamond", "serif"],
@@ -48,6 +56,7 @@
         },
       };
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css"
@@ -261,6 +270,36 @@
         <div id="gallery-grid" class="masonry-grid mt-8"></div>
       </section>
 
+      <section id="reviews" class="bg-[#f7f4ef] py-20">
+        <div class="mx-auto max-w-7xl px-5 md:px-8">
+          <h2 class="font-heading text-4xl text-sage">Guest Reviews</h2>
+          <p class="mt-2 text-sm uppercase tracking-[0.14em] text-slate-600">Stories from the Mistral table</p>
+          <div class="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            <article class="review-card glass-card p-6">
+              <div class="star-row" aria-label="5-star rating">★★★★★</div>
+              <p class="mt-3 text-sm text-slate-700">
+                Every dish felt thoughtful and elegant. The sea bass and service were absolutely outstanding.
+              </p>
+              <p class="mt-4 text-sm font-semibold text-sage">- Elena R.</p>
+            </article>
+            <article class="review-card glass-card p-6">
+              <div class="star-row" aria-label="5-star rating">★★★★★</div>
+              <p class="mt-3 text-sm text-slate-700">
+                Stunning coastal atmosphere and a beautifully curated wine list. Perfect sunset dinner spot.
+              </p>
+              <p class="mt-4 text-sm font-semibold text-sage">- Martin D.</p>
+            </article>
+            <article class="review-card glass-card p-6">
+              <div class="star-row" aria-label="5-star rating">★★★★★</div>
+              <p class="mt-3 text-sm text-slate-700">
+                Refined yet warm. The tasting menu and desserts made this one of our best evenings in Sveti Vlas.
+              </p>
+              <p class="mt-4 text-sm font-semibold text-sage">- Sofia P.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
       <section id="events" class="bg-[#f2eee8] py-20">
         <div class="mx-auto max-w-7xl px-5 md:px-8">
           <h2 class="font-heading text-4xl text-sage" data-i18n="events.title">Upcoming Events</h2>
@@ -288,12 +327,15 @@
           </article>
         </div>
         <div class="mt-8 overflow-hidden rounded-xl border border-sage/20 map-shell">
-          <iframe
-            title="Mistral location map"
-            src="https://maps.google.com/maps?q=Sveti%20Vlas&t=&z=14&ie=UTF8&iwloc=&output=embed"
-            class="h-80 w-full"
-            loading="lazy"
-          ></iframe>
+          <div id="mistral-map" class="h-80 w-full" role="region" aria-label="Mistral location map"></div>
+          <noscript>
+            <iframe
+              title="Mistral location map"
+              src="https://maps.google.com/maps?q=Sveti%20Vlas&t=&z=14&ie=UTF8&iwloc=&output=embed"
+              class="h-80 w-full"
+              loading="lazy"
+            ></iframe>
+          </noscript>
         </div>
 
         <form id="contact-form" class="mt-8 grid gap-4 rounded-xl border border-sage/20 bg-white/45 p-6 backdrop-blur-[10px]">
@@ -384,6 +426,12 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+    <script src="js/map.js"></script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&callback=initMistralMap"
+      async
+      defer
+    ></script>
     <script type="module" src="js/i18n.js"></script>
     <script type="module" src="js/menu.js"></script>
     <script type="module" src="js/gallery.js"></script>
