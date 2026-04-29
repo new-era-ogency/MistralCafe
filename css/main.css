@@ -69,6 +69,16 @@ h2 {
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   box-shadow: 0 10px 30px rgba(28, 35, 29, 0.18);
+  transform: translateY(0) scale(0.985);
+  transform-origin: top center;
+}
+
+.nav-shell {
+  transition: min-height 260ms ease;
+}
+
+#site-header.is-scrolled .nav-shell {
+  min-height: 3.9rem;
 }
 
 .nav-link {
@@ -215,6 +225,17 @@ h2 {
   position: relative;
 }
 
+.menu-card-image-wrap img {
+  filter: blur(2px);
+  transform: scale(1.03);
+  transition: filter 320ms ease, transform 320ms ease, box-shadow 320ms ease;
+}
+
+.menu-card:hover .menu-card-image-wrap img {
+  filter: blur(0);
+  transform: scale(1.08);
+}
+
 .menu-plus {
   position: absolute;
   right: 10px;
@@ -303,6 +324,10 @@ h2 {
   min-height: 20rem;
 }
 
+.booking-modal-panel {
+  background: rgba(250, 248, 245, 0.82);
+}
+
 .review-card {
   transition: transform 220ms ease, box-shadow 220ms ease;
 }
@@ -310,6 +335,19 @@ h2 {
 .review-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 14px 24px rgba(36, 50, 38, 0.15);
+}
+
+.voices-swiper .swiper-slide {
+  height: auto;
+}
+
+.voices-swiper .swiper-pagination-bullet-active {
+  background: #7c9a7e;
+}
+
+.voices-swiper .swiper-button-prev,
+.voices-swiper .swiper-button-next {
+  color: #7c9a7e;
 }
 
 .star-row {
@@ -343,6 +381,25 @@ h2 {
   background: #e0c6a7;
   box-shadow: 0 12px 22px rgba(84, 66, 47, 0.22);
   transform: translateY(-2px);
+}
+
+.magnetic-btn {
+  will-change: transform;
+}
+
+.story-parallax-section {
+  isolation: isolate;
+}
+
+.story-parallax-bg {
+  background-size: cover;
+  background-position: center;
+  transform: scale(1.12);
+  will-change: transform;
+}
+
+.story-overlay {
+  background: linear-gradient(180deg, rgba(24, 35, 27, 0.35), rgba(24, 35, 27, 0.58));
 }
 
 @media (max-width: 1024px) {

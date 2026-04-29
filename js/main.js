@@ -43,14 +43,33 @@ window.setTimeout(() => {
 }, 2200);
 
 const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-if (!prefersReducedMotion && window.gsap) {
-  window.gsap.from("main section", {
-    opacity: 0,
-    y: 32,
-    duration: 0.9,
-    ease: "power2.out",
-    stagger: 0.1,
-    clearProps: "opacity,transform",
+if (!prefersReducedMotion && window.Lenis) {
+  const lenis = new window.Lenis({
+    duration: 1.1,
+    smoothWheel: true,
+    wheelMultiplier: 0.9,
+  });
+
+  const raf = (time) => {
+    lenis.raf(time);
+    window.requestAnimationFrame(raf);
+  };
+  window.requestAnimationFrame(raf);
+}
+
+if (!prefersReducedMotion && window.gsap && window.ScrollTrigger) {
+  window.gsap.registerPlugin(window.ScrollTrigger);
+  window.gsap.utils.toArray("main section").forEach((section) => {
+    window.gsap.from(section, {
+      opacity: 0,
+      y: 36,
+      duration: 0.95,
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: section,
+        start: "top 82%",
+      },
+    });
   });
 }
 
@@ -62,4 +81,52 @@ if (heroImage && !prefersReducedMotion) {
   };
   updateParallax();
   window.addEventListener("scroll", updateParallax, { passive: true });
+}
+
+const storyParallax = document.querySelector("[data-parallax]");
+if (storyParallax && !prefersReducedMotion) {
+  const updateStoryParallax = () => {
+    const section = document.getElementById("our-story");
+    if (!section) return;
+    const rect = section.getBoundingClientRect();
+    const center = window.innerHeight * 0.5;
+    const delta = (rect.top + rect.height / 2 - center) * 0.08;
+    storyParallax.style.transform = `scale(1.12) translate3d(0, ${delta}px, 0)`;
+  };
+  updateStoryParallax();
+  window.addEventListener("scroll", updateStoryParallax, { passive: true });
+}
+
+const magneticButtons = document.querySelectorAll(".magnetic-btn");
+magneticButtons.forEach((button) => {
+  button.addEventListener("mousemove", (event) => {
+    const rect = button.getBoundingClientRect();
+    const x = event.clientX - rect.left - rect.width / 2;
+    const y = event.clientY - rect.top - rect.height / 2;
+    button.style.transform = `translate(${x * 0.12}px, ${y * 0.2}px)`;
+  });
+  button.addEventListener("mouseleave", () => {
+    button.style.transform = "";
+  });
+});
+
+if (window.Swiper) {
+  new window.Swiper(".voices-swiper", {
+    slidesPerView: 1,
+    spaceBetween: 16,
+    loop: true,
+    speed: 700,
+    pagination: {
+      el: ".voices-swiper .swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".voices-swiper .swiper-button-next",
+      prevEl: ".voices-swiper .swiper-button-prev",
+    },
+    breakpoints: {
+      768: { slidesPerView: 2, spaceBetween: 22 },
+      1200: { slidesPerView: 3, spaceBetween: 26 },
+    },
+  });
 }
