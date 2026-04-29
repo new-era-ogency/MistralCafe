@@ -1,0 +1,71 @@
+{"sessionId":"33275d","runId":"pre-fix","hypothesisId":"H1","location":"js/main.js:3","message":"main.js loaded and header queried","data":{"headerFound":true,"path":"/"},"timestamp":1777447041463}
+{"sessionId":"33275d","runId":"pre-fix","hypothesisId":"H3","location":"js/main.js:9","message":"scroll handler executing","data":{"scrollY":0},"timestamp":1777447041511}
+{"sessionId":"33275d","runId":"pre-fix","hypothesisId":"H3","location":"js/main.js:9","message":"scroll handler executing","data":{"scrollY":13},"timestamp":1777447042872}
+{"sessionId":"33275d","runId":"pre-fix","hypothesisId":"H4","location":"js/main.js:14","message":"header switched to scrolled state","data":{"hasClass":true},"timestamp":1777447042873}
+{"sessionId":"33275d","runId":"pre-fix","hypothesisId":"H3","location":"js/main.js:9","message":"scroll handler executing","data":{"scrollY":85},"timestamp":1777447042905}
+{"sessionId":"33275d","runId":"pre-fix","hypothesisId":"H4","location":"js/main.js:14","message":"header switched to scrolled state","data":{"hasClass":true},"timestamp":1777447042906}
+{"sessionId":"33275d","runId":"pre-fix","hypothesisId":"H3","location":"js/main.js:9","message":"scroll handler executing","data":{"scrollY":107},"timestamp":1777447042923}
+{"sessionId":"33275d","runId":"pre-fix","hypothesisId":"H4","location":"js/main.js:14","message":"header switched to scrolled state","data":{"hasClass":true},"timestamp":1777447042923}
+{"sessionId":"33275d","runId":"pre-fix","hypothesisId":"H3","location":"js/main.js:9","message":"scroll handler executing","data":{"scrollY":127},"timestamp":1777447042938}
+{"sessionId":"33275d","runId":"pre-fix","hypothesisId":"H4","location":"js/main.js:14","message":"header switched to scrolled state","data":{"hasClass":true},"timestamp":1777447042939}
+{"sessionId":"33275d","runId":"pre-fix","hypothesisId":"H3","location":"js/main.js:9","message":"scroll handler executing","data":{"scrollY":143},"timestamp":1777447043276}
+{"sessionId":"33275d","runId":"pre-fix","hypothesisId":"H4","location":"js/main.js:14","message":"header switched to scrolled state","data":{"hasClass":true},"timestamp":1777447043277}
+{"sessionId":"33275d","runId":"pre-fix","hypothesisId":"H3","location":"js/main.js:9","message":"scroll handler executing","data":{"scrollY":182},"timestamp":1777447043905}
+{"sessionId":"33275d","runId":"pre-fix","hypothesisId":"H4","location":"js/main.js:14","message":"header switched to scrolled state","data":{"hasClass":true},"timestamp":1777447043906}
+{"sessionId":"33275d","runId":"pre-fix","hypothesisId":"H3","location":"js/main.js:9","message":"scroll handler executing","data":{"scrollY":227},"timestamp":1777447043922}
+{"sessionId":"33275d","runId":"pre-fix","hypothesisId":"H4","location":"js/main.js:14","message":"header switched to scrolled state","data":{"hasClass":true},"timestamp":1777447043923}
+{"sessionId":"33275d","runId":"pre-fix","hypothesisId":"H3","location":"js/main.js:9","message":"scroll handler executing","data":{"scrollY":260},"timestamp":1777447043954}
+{"sessionId":"33275d","runId":"pre-fix","hypothesisId":"H4","location":"js/main.js:14","message":"header switched to scrolled state","data":{"hasClass":true},"timestamp":1777447043956}
+{"sessionId":"33275d","runId":"pre-fix","hypothesisId":"H3","location":"js/main.js:9","message":"scroll handler executing","data":{"scrollY":117},"timestamp":1777447045054}
+{"sessionId":"33275d","runId":"pre-fix","hypothesisId":"H4","location":"js/main.js:14","message":"header switched to scrolled state","data":{"hasClass":true},"timestamp":1777447045055}
+{"sessionId":"33275d","runId":"pre-fix","hypothesisId":"H3","location":"js/main.js:9","message":"scroll handler executing","data":{"scrollY":55},"timestamp":1777447045070}
+{"sessionId":"33275d","runId":"pre-fix","hypothesisId":"H4","location":"js/main.js:14","message":"header switched to scrolled state","data":{"hasClass":true},"timestamp":1777447045071}
+{"sessionId":"33275d","runId":"pre-fix","hypothesisId":"H3","location":"js/main.js:9","message":"scroll handler executing","data":{"scrollY":3},"timestamp":1777447045087}
+{"sessionId":"33275d","runId":"pre-fix","hypothesisId":"H3","location":"js/main.js:9","message":"scroll handler executing","data":{"scrollY":0},"timestamp":1777447045104}
+{"sessionId":"33275d","runId":"pre-fix","hypothesisId":"H3","location":"js/main.js:9","message":"scroll handler executing","data":{"scrollY":49},"timestamp":1777447045872}
+{"sessionId":"33275d","runId":"pre-fix","hypothesisId":"H4","location":"js/main.js:14","message":"header switched to scrolled state","data":{"hasClass":true},"timestamp":1777447045873}
+{"sessionId":"33275d","runId":"pre-fix","hypothesisId":"H3","location":"js/main.js:9","message":"scroll handler executing","data":{"scrollY":72},"timestamp":1777447045886}
+{"sessionId":"33275d","runId":"pre-fix","hypothesisId":"H4","location":"js/main.js:14","message":"header switched to scrolled state","data":{"hasClass":true},"timestamp":1777447045886}
+{"sessionId":"33275d","runId":"pre-fix","hypothesisId":"H3","location":"js/main.js:9","message":"scroll handler executing","data":{"scrollY":89},"timestamp":1777447045904}
+{"sessionId":"33275d","runId":"pre-fix","hypothesisId":"H4","location":"js/main.js:14","message":"header switched to scrolled state","data":{"hasClass":true},"timestamp":1777447045904}
+{"sessionId":"33275d","runId":"pre-fix","hypothesisId":"H3","location":"js/main.js:9","message":"scroll handler executing","data":{"scrollY":116},"timestamp":1777447045920}
+{"sessionId":"33275d","runId":"pre-fix","hypothesisId":"H4","location":"js/main.js:14","message":"header switched to scrolled state","data":{"hasClass":true},"timestamp":1777447045921}
+{"sessionId":"33275d","runId":"pre-fix","hypothesisId":"H3","location":"js/main.js:9","message":"scroll handler executing","data":{"scrollY":129},"timestamp":1777447045937}
+{"sessionId":"33275d","runId":"pre-fix","hypothesisId":"H4","location":"js/main.js:14","message":"header switched to scrolled state","data":{"hasClass":true},"timestamp":1777447045937}
+{"sessionId":"33275d","runId":"pre-fix","hypothesisId":"H3","location":"js/main.js:9","message":"scroll handler executing","data":{"scrollY":206},"timestamp":1777447046090}
+{"sessionId":"33275d","runId":"pre-fix","hypothesisId":"H4","location":"js/main.js:14","message":"header switched to scrolled state","data":{"hasClass":true},"timestamp":1777447046091}
+{"sessionId":"33275d","runId":"pre-fix","hypothesisId":"H3","location":"js/main.js:9","message":"scroll handler executing","data":{"scrollY":207},"timestamp":1777447046104}
+{"sessionId":"33275d","runId":"pre-fix","hypothesisId":"H4","location":"js/main.js:14","message":"header switched to scrolled state","data":{"hasClass":true},"timestamp":1777447046105}
+{"sessionId":"33275d","runId":"pre-fix","hypothesisId":"H3","location":"js/main.js:9","message":"scroll handler executing","data":{"scrollY":206},"timestamp":1777447046153}
+{"sessionId":"33275d","runId":"pre-fix","hypothesisId":"H4","location":"js/main.js:14","message":"header switched to scrolled state","data":{"hasClass":true},"timestamp":1777447046154}
+{"sessionId":"33275d","runId":"pre-fix","hypothesisId":"H3","location":"js/main.js:9","message":"scroll handler executing","data":{"scrollY":199},"timestamp":1777447046169}
+{"sessionId":"33275d","runId":"pre-fix","hypothesisId":"H4","location":"js/main.js:14","message":"header switched to scrolled state","data":{"hasClass":true},"timestamp":1777447046170}
+{"sessionId":"33275d","runId":"pre-fix","hypothesisId":"H3","location":"js/main.js:9","message":"scroll handler executing","data":{"scrollY":187},"timestamp":1777447046186}
+{"sessionId":"33275d","runId":"pre-fix","hypothesisId":"H4","location":"js/main.js:14","message":"header switched to scrolled state","data":{"hasClass":true},"timestamp":1777447046187}
+{"sessionId":"33275d","runId":"pre-fix","hypothesisId":"H3","location":"js/main.js:9","message":"scroll handler executing","data":{"scrollY":171},"timestamp":1777447046203}
+{"sessionId":"33275d","runId":"pre-fix","hypothesisId":"H4","location":"js/main.js:14","message":"header switched to scrolled state","data":{"hasClass":true},"timestamp":1777447046204}
+{"sessionId":"33275d","runId":"pre-fix","hypothesisId":"H3","location":"js/main.js:9","message":"scroll handler executing","data":{"scrollY":133},"timestamp":1777447046219}
+{"sessionId":"33275d","runId":"pre-fix","hypothesisId":"H4","location":"js/main.js:14","message":"header switched to scrolled state","data":{"hasClass":true},"timestamp":1777447046220}
+{"sessionId":"33275d","runId":"pre-fix","hypothesisId":"H3","location":"js/main.js:9","message":"scroll handler executing","data":{"scrollY":97},"timestamp":1777447046235}
+{"sessionId":"33275d","runId":"pre-fix","hypothesisId":"H4","location":"js/main.js:14","message":"header switched to scrolled state","data":{"hasClass":true},"timestamp":1777447046236}
+{"sessionId":"33275d","runId":"pre-fix","hypothesisId":"H3","location":"js/main.js:9","message":"scroll handler executing","data":{"scrollY":58},"timestamp":1777447046252}
+{"sessionId":"33275d","runId":"pre-fix","hypothesisId":"H4","location":"js/main.js:14","message":"header switched to scrolled state","data":{"hasClass":true},"timestamp":1777447046253}
+{"sessionId":"33275d","runId":"pre-fix","hypothesisId":"H3","location":"js/main.js:9","message":"scroll handler executing","data":{"scrollY":1},"timestamp":1777447046270}
+{"sessionId":"33275d","runId":"pre-fix","hypothesisId":"H3","location":"js/main.js:9","message":"scroll handler executing","data":{"scrollY":0},"timestamp":1777447046286}
+{"sessionId":"33275d","runId":"pre-fix","hypothesisId":"H3","location":"js/main.js:9","message":"scroll handler executing","data":{"scrollY":113},"timestamp":1777447046936}
+{"sessionId":"33275d","runId":"pre-fix","hypothesisId":"H4","location":"js/main.js:14","message":"header switched to scrolled state","data":{"hasClass":true},"timestamp":1777447046937}
+{"sessionId":"33275d","runId":"pre-fix","hypothesisId":"H3","location":"js/main.js:9","message":"scroll handler executing","data":{"scrollY":162},"timestamp":1777447047285}
+{"sessionId":"33275d","runId":"pre-fix","hypothesisId":"H4","location":"js/main.js:14","message":"header switched to scrolled state","data":{"hasClass":true},"timestamp":1777447047285}
+{"sessionId":"33275d","runId":"pre-fix","hypothesisId":"H3","location":"js/main.js:9","message":"scroll handler executing","data":{"scrollY":190},"timestamp":1777447047299}
+{"sessionId":"33275d","runId":"pre-fix","hypothesisId":"H4","location":"js/main.js:14","message":"header switched to scrolled state","data":{"hasClass":true},"timestamp":1777447047300}
+{"sessionId":"33275d","runId":"pre-fix","hypothesisId":"H3","location":"js/main.js:9","message":"scroll handler executing","data":{"scrollY":237},"timestamp":1777447047316}
+{"sessionId":"33275d","runId":"pre-fix","hypothesisId":"H4","location":"js/main.js:14","message":"header switched to scrolled state","data":{"hasClass":true},"timestamp":1777447047318}
+{"sessionId":"33275d","runId":"pre-fix","hypothesisId":"H3","location":"js/main.js:9","message":"scroll handler executing","data":{"scrollY":260},"timestamp":1777447047332}
+{"sessionId":"33275d","runId":"pre-fix","hypothesisId":"H4","location":"js/main.js:14","message":"header switched to scrolled state","data":{"hasClass":true},"timestamp":1777447047334}
+{"sessionId":"33275d","runId":"pre-fix","hypothesisId":"H3","location":"js/main.js:9","message":"scroll handler executing","data":{"scrollY":164},"timestamp":1777447048583}
+{"sessionId":"33275d","runId":"pre-fix","hypothesisId":"H4","location":"js/main.js:14","message":"header switched to scrolled state","data":{"hasClass":true},"timestamp":1777447048583}
+{"sessionId":"33275d","runId":"pre-fix","hypothesisId":"H3","location":"js/main.js:9","message":"scroll handler executing","data":{"scrollY":97},"timestamp":1777447048602}
+{"sessionId":"33275d","runId":"pre-fix","hypothesisId":"H4","location":"js/main.js:14","message":"header switched to scrolled state","data":{"hasClass":true},"timestamp":1777447048603}
+{"sessionId":"33275d","runId":"pre-fix","hypothesisId":"H3","location":"js/main.js:9","message":"scroll handler executing","data":{"scrollY":26},"timestamp":1777447048632}
+{"sessionId":"33275d","runId":"pre-fix","hypothesisId":"H4","location":"js/main.js:14","message":"header switched to scrolled state","data":{"hasClass":true},"timestamp":1777447048634}
+{"sessionId":"33275d","runId":"pre-fix","hypothesisId":"H3","location":"js/main.js:9","message":"scroll handler executing","data":{"scrollY":0},"timestamp":1777447048650}

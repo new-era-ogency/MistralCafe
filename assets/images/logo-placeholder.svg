@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="120" viewBox="0 0 240 120" role="img" aria-labelledby="logoTitle logoDesc">
+  <title id="logoTitle">Mistral logo placeholder</title>
+  <desc id="logoDesc">A simple placeholder logo with the Mistral wordmark.</desc>
+  <rect width="240" height="120" fill="#7C9A7E" rx="12" />
+  <text x="120" y="68" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="40" fill="#FAF8F5">
+    Mistral
+  </text>
+</svg>

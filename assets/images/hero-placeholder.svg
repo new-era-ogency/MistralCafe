@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080" role="img" aria-labelledby="heroTitle heroDesc">
+  <title id="heroTitle">Mistral hero placeholder image</title>
+  <desc id="heroDesc">A gradient placeholder suggesting sea and sandy coast tones.</desc>
+  <defs>
+    <linearGradient id="seaGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#8FAEA1" />
+      <stop offset="45%" stop-color="#7C9A7E" />
+      <stop offset="100%" stop-color="#D4B896" />
+    </linearGradient>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#seaGradient)" />
+  <circle cx="1570" cy="250" r="110" fill="#FAF8F5" fill-opacity="0.32" />
+  <path d="M0 760 C320 680, 580 820, 920 760 C1220 705, 1500 840, 1920 740 L1920 1080 L0 1080 Z" fill="#FAF8F5" fill-opacity="0.18" />
+</svg>
