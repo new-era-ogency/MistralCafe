@@ -54,6 +54,72 @@
     />
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <link rel="stylesheet" href="css/main.css" />
+    <style>
+      /* Critical fallback styles for GitHub Pages */
+      body {
+        color: #0f172a;
+      }
+
+      .preloader {
+        position: fixed;
+        inset: 0;
+        z-index: 120;
+        display: grid;
+        place-items: center;
+        background: #7c9a7e;
+        transition: opacity 320ms ease, visibility 320ms ease;
+      }
+
+      .preloader.is-hidden {
+        opacity: 0;
+        visibility: hidden;
+      }
+
+      .preloader-mark {
+        color: #faf8f5;
+        font-family: "Cormorant Garamond", serif;
+        font-size: 3rem;
+        letter-spacing: 0.08em;
+      }
+
+      .hero-overlay {
+        background: linear-gradient(
+          to bottom,
+          rgba(22, 30, 24, 0.28) 0%,
+          rgba(22, 30, 24, 0.5) 52%,
+          rgba(22, 30, 24, 0.72) 100%
+        );
+      }
+
+      .ken-burns img {
+        transform-origin: center center;
+        animation: kenBurnsZoom 30s ease-in-out infinite alternate;
+        will-change: transform;
+      }
+
+      @keyframes kenBurnsZoom {
+        0% {
+          transform: scale(1) translate(0, 0);
+        }
+        100% {
+          transform: scale(1.12) translate(-1.6%, -1%);
+        }
+      }
+
+      .glass-card {
+        background: rgba(255, 255, 255, 0.54);
+        border: 1px solid rgba(124, 154, 126, 0.3);
+        border-radius: 14px;
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+      }
+
+      .glass-input {
+        background: rgba(255, 255, 255, 0.56);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+      }
+    </style>
 
     <script type="application/ld+json">
       {
