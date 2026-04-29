@@ -56,6 +56,12 @@
     <link rel="stylesheet" href="css/main.css" />
     <style>
       /* Critical fallback styles for GitHub Pages */
+      html,
+      body {
+        overflow-x: hidden;
+        overflow-y: auto;
+      }
+
       body {
         color: #0f172a;
       }
@@ -68,6 +74,7 @@
         place-items: center;
         background: #7c9a7e;
         transition: opacity 320ms ease, visibility 320ms ease;
+        pointer-events: none;
       }
 
       .preloader.is-hidden {
@@ -173,7 +180,7 @@
     <main>
       <section
         id="hero"
-        class="relative flex min-h-[100svh] items-center overflow-hidden"
+        class="relative flex min-h-screen items-center overflow-hidden"
         aria-label="Hero section"
       >
         <div class="hero-bg ken-burns absolute inset-0">
