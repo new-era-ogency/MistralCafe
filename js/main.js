@@ -36,3 +36,8 @@ window.addEventListener("load", () => {
     preloader?.classList.add("is-hidden");
   }, 600);
 });
+
+// Safety fallback: never let preloader block viewport if scripts partially fail.
+window.setTimeout(() => {
+  preloader?.classList.add("is-hidden");
+}, 2200);
