@@ -80,6 +80,7 @@
       .preloader.is-hidden {
         opacity: 0;
         visibility: hidden;
+        display: none !important;
       }
 
       .preloader-mark {
@@ -147,6 +148,17 @@
     </script>
   </head>
   <body class="bg-warm text-slate-900 font-body antialiased">
+    <script>
+      window.setTimeout(function () {
+        var preloader = document.getElementById("preloader");
+        if (preloader) {
+          preloader.classList.add("is-hidden");
+          preloader.style.display = "none";
+        }
+        document.body.style.overflow = "auto";
+      }, 2000);
+    </script>
+
     <div id="preloader" class="preloader" aria-hidden="true">
       <div class="preloader-mark">Mistral</div>
     </div>
